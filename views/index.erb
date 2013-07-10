@@ -1,18 +1,31 @@
 <html>
-  <head></head>
-  <body>
+  <head><title></title>
+  	<style>
+  #wrong {
+  	background: red;
+  }
+  #right {
+  	background: green;
+  }
+	</style>
+  </head>
+<% if correct %>
+  <body id="right">
+  <% else %>
+  <body id="wrong">
+  <% end %>
+  <div style="text-align:center">
     <p>
     <% if correct %>
       The SECRET NUMBER is <%= number %>
-      <img src = "https://lh3.googleusercontent.com/-JBsu_qCqtS4/TtgL47IXboI/AAAAAAAAKRo/wWJ2yX8ZCG4/w402/Moonset_Micael_Reynaud.gif">
-      <body style='background: red'>
+      <img src = "http://media.tumblr.com/tumblr_lzwagsA2Bs1r7n0dh.gif">
       <% end %>
       Your guess is <%= guess %>
+      <form>
+  		<input type='text' name='guess' />
+  		<input type='submit' value='Guess!' />
+	</form>
     </p>
+    </div>
   </body>
 </html>
-
-<form>
-  <input type='text' name='guess' />
-  <input type='submit' value='Guess!' />
-</form>
